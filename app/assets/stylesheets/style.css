@@ -355,6 +355,23 @@ table {
   box-sizing: border-box;
 }
 
+.hima_top{
+  display: flex;
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+.list{
+  margin-left: 100px;
+  font-size: 50px;
+  list-style: disc;
+}
+
+.list_top{
+  font-size: x-large;
+  margin-left: 150px;
+}
+
 img,
 object,
 embed {
@@ -767,7 +784,7 @@ header.header div.header__bar.row div.grid-6 {
 }
 
 header.header div.header__bar.row div.grid-6 a.post {
-  width: 120px;
+  width: 130px;
   display: inline-left;
   margin-left: 10px;
 }
