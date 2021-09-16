@@ -1075,6 +1075,13 @@ footer p {
   width: 10%;
 }
 
-canvas {
+.canvas {
   background: #eee;
+  text-align: center;
+  margin: auto;
 }
+canvas {
+  background: #000;
+  display: block;
+  border: solid 1.0px #eeeeee;
+  margin: 0 auto;
