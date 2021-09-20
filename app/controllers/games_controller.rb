@@ -3,7 +3,16 @@ class GamesController < ApplicationController
     
   end
 
-  def new
+  def index2
     
   end
+
+  def index3
+
+  end
+  def create
+
+  end
+
+
 end
