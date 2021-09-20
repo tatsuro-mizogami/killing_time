@@ -1,14 +1,14 @@
 <div class="canvas">
 <canvas id="myCanvas" width="850" height="620"></canvas>
 <a id="start" onclick="gameButton()" class="btn-circle-border-double">START</a>
-<audio id="soundBrick" src="https://taira-komori.jpn.org/sfxr/sfxrse/02laser/shoot01.mp3"       type="audio/mp3" preload="auto"></audio>
 <audio id="soundBar"   src="https://taira-komori.jpn.org/sfxr/sfxrse/02laser/shoot03.mp3"       type="audio/mp3" preload="auto"></audio>
-<audio id="soundFail"  src="https://taira-komori.jpn.org/sfxr/sfxrse/04powerup/powerdown02.mp3" type="audio/mp3" preload="auto"></audio>
 <audio id="soundUp"    src="https://taira-komori.jpn.org/sfxr/sfxrse/04powerup/powerup05.mp3"   type="audio/mp3" preload="auto"></audio>
 </div>
+
 <script>
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
+
 let ballRadius = 10;
 let x = canvas.width/2;
 let y = canvas.height-80;
@@ -209,8 +209,5 @@ function gameButton() {
   draw();
   document.getElementById("start").innerHTML = "SPEED UP";
 }
-
-
-
 
 </script>
