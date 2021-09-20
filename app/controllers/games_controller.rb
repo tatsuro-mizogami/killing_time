@@ -7,7 +7,7 @@ class GamesController < ApplicationController
     
   end
 
-  def new
+  def index3
 
   end
   def create
