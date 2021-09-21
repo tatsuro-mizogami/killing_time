@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-belongs_to :game
+belongs_to :game, optional: true
 
 validates :nickname, presence: true
 end

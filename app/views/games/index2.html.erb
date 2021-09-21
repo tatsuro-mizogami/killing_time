@@ -1,30 +1,31 @@
+
 <script>
-var c = document.createElement("canvas");
-var ctx = c.getContext("2d");
+let c = document.createElement("canvas");
+let ctx = c.getContext("2d");
 // c.width = window.innerWidth;
 // c.height = window.innerHeight;
-c.width = 600
+c.width = 1600
 c.height = 400;
 
-var size = 15;
+let size = 15;
 
 document.body.appendChild(c);
 
-var perm = [];
+let perm = [];
 
 while (perm.length < 255) {
   while (perm.includes(val = Math.floor(Math.random() * 255)));
   perm.push(val);
 }
 
-var lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
+let lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
 
-var noise = x => {
+let noise = x => {
   x = x * 0.01 % 255;
   return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
 }
 
-var player = new function() {
+let player = new function() {
   this.x = c.width / 2;
   this.y = 0;
   this.ySpeed = 0;
@@ -37,10 +38,10 @@ var player = new function() {
   // this.img.src = "images/trump.png";
 
   this.draw = function() {
-    var p1 = c.height - noise(t + this.x) * 0.25;
-    var p2 = c.height - noise(t + 5 + this.x) * 0.25;
+    let p1 = c.height - noise(t + this.x) * 0.25;
+    let p2 = c.height - noise(t + 5 + this.x) * 0.25;
 
-    var grounded = 0
+    let grounded = 0
 
     if(p1 - size > this.y) {
       this.ySpeed += 0.1;
@@ -58,7 +59,7 @@ var player = new function() {
       this.x -= speed * 5;
     }
 
-    var angle = Math.atan2((p2 - size) - this.y, (this.x + 5) - this.x);
+    let angle = Math.atan2((p2 - size) - this.y, (this.x + 5) - this.x);
 
     // this.rot = angle;
 
@@ -85,10 +86,10 @@ var player = new function() {
   }
 }
 
-var t = 0;
-var speed = 0;
-var playing = true;
-var k = {ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0};
+let t = 0;
+let speed = 0;
+let playing = true;
+let k = {ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0};
 
 
 function loop() {
@@ -102,7 +103,7 @@ function loop() {
   ctx.beginPath();
   ctx.moveTo(0, c.height);
 
-  for (var i = 0; i < c.width; i++) {
+  for (let i = 0; i < c.width; i++) {
     ctx.lineTo(i, c.height - noise(t + i) * 0.25);
   }
 
@@ -122,3 +123,14 @@ loop();
 </script>
 
 <button type="button" class="btn btn-raised btn-success" onclick="location.reload();">リロード</button>
+
+<div>
+  <h1>操作方法</h1>
+  <p>前に進む・・・・⬆️</p>
+  <p>止まる・・・・・⬇️</p>
+  <p>前方に回転・・・▶︎</p>
+  <p>後方に回転・・・◀︎</p>
+
+
+
+</div>
