@@ -3,7 +3,9 @@
   <%=image_tag "hima.png" %>
 <div>
   <p class="list_top">目次</p>
+  <% if !user_signed_in? %>
   <div class="listed">この２つはユーザー登録しなくても遊べるよ</div>
+  <% end %>
    <ul>
     <li class="list"><%= link_to 'ブロック崩し', games_index3_path %></li>
     <li class="list"><%= link_to 'バイクゲーム', games_index2_path %></li>

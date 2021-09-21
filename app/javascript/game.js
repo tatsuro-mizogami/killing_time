@@ -9,7 +9,7 @@ window.addEventListener('load', function () {
             location.href = '/users/sign_up'
         }
         else {
-            console.log('キャンセルがクリックされました');
+            
         }
     })
 })
