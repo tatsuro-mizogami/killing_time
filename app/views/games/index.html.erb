@@ -1,11 +1,20 @@
+
 <div class="hima_top">
   <%=image_tag "hima.png" %>
 <div>
   <p class="list_top">目次</p>
+  <div class="listed">この２つはユーザー登録しなくても遊べるよ</div>
    <ul>
     <li class="list"><%= link_to 'ブロック崩し', games_index3_path %></li>
-    <li class="list"><%= link_to 'クイズゲーム', games_index2_path %></li>
+    <li class="list"><%= link_to 'バイクゲーム', games_index2_path %></li>
+    <% if user_signed_in?%>
+    <li class="list"><%= link_to 'クイズゲーム', games_index4_path %></li>
+    <% end %>
    </ul>
+   <% if !user_signed_in? %>
+    <button id="btn">and more...</button>
+   <% end %>
+
 </div>
 
 
