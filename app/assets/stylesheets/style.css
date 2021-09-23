@@ -725,8 +725,7 @@ form input[type="submit"] {
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #55c7ab;
-  color: #2ad3af;
+  color: #7296cc;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -1085,7 +1084,7 @@ footer p {
   margin: auto;
 }
 canvas {
-  background: rgba(60, 63, 71, 0.323);
+  background: rgba(141, 150, 174, 0.323);
   display: block;
   border: solid 1.0px #eeeeee;
   margin: 0 auto;
